@@ -1,0 +1,20 @@
+﻿@using WebApplication7_13.data
+
+@model WebApplication7_13.web.Models.EditViewModel
+
+<div style="margin-top: 40px;">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 well">
+            <form method="post" action="/home/EditPerson">
+                <input hidden value="@Model.Person.Id" name="Id" />
+                <input type="text" class="form-control" placeholder="First Name" name="firstName" value="@Model.Person.FirstName"/>
+                <br />
+                <input type="text" class="form-control" placeholder="Last Name" name="lastName" value="@Model.Person.LastName" />
+                <br />
+                <input type="text" class="form-control" placeholder="Age" name="age" value="@Model.Person.Age   "/>
+                <br />
+                <button class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
